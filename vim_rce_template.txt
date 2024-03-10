@@ -1,3 +1,12 @@
+" :echo $MYVIMRC will tell you the location of the vimrc being used, but it you don't have one it'll be blank
+" :version tells you were vim will look for a vimrc.
+" :help key-notation
+" :Hex :Sex :Lex
+" <C-P> <C-N> <C-X> <C-L> code completion
+
+let mapleader=" "
+
+inoremap <C-c> <ESC>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 nnoremap J mzJ`z
@@ -5,10 +14,12 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
+nnoremap <Leader>f :Lex!<CR><C-w>-<C-w>-<C-w>h
+"nnoremap <Leader>f :Lex!<CR>:vertical resize 40<CR><C-w>h
 
 colorscheme ron
 
-" for if backup files are created after saving
+" if backup files are created after :w
 " set nobackup
 " set noundofile
 " set nowritebackup
@@ -17,11 +28,13 @@ colorscheme ron
 set guicursor =""
 
 set rnu
+set nu
 
+
+set expandtab
 set tabstop = 4
 set softtabstop = 4
 set shiftwidth = 4
-set expandtab
 
 set smartindent
 
@@ -31,3 +44,5 @@ set hlsearch
 set incsearch
 
 set scrolloff = 8
+
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
