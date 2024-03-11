@@ -33,7 +33,6 @@ nnoremap <Leader>w :tabc<CR>
 nnoremap <Leader><tab> gt "next tab
 nnoremap <Leader><S-tab> gT "prev tab
 
-
 colorscheme ron
 
 " if backup files are created after :w
@@ -51,14 +50,13 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-
 set smartindent
-
 set nowrap
-
 set hlsearch
 set incsearch
-
 set scrolloff=8
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 let g:netrw_bufsettings='noma nomod nu nobl nowrap ro'
