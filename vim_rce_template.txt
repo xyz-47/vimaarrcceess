@@ -34,6 +34,7 @@ nnoremap <Leader><tab> gt "next tab
 nnoremap <Leader><S-tab> gT "prev tab
 
 colorscheme ron
+syntax on
 
 " if backup files are created after :w
 "set nobackup
