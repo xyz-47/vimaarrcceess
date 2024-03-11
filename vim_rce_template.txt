@@ -3,8 +3,16 @@
 " :help key-notation
 " :Hex :Sex :Lex
 " <C-P> <C-N> <C-X> <C-L> code completion
+" <Ctrl-W>+v       # Opens a new vertical split
+" <Ctrl-W>+s       # Opens a new horizontal split
+" <Ctrl-W>+c       # Closes a window
+" <Ctrl-W>+o       # Makes current window the only one on screen and closes other windows
+" <Ctrl-W>+h/j/k/l # Moves the cursor to left
 
 let mapleader=" "
+
+" Without this option, whenever a changed buffer goes to "hidden", Vim will prompt you to save the file
+" set hidden
 
 inoremap <C-c> <ESC>
 vnoremap J :m '>+1<CR>gv=gv
@@ -14,8 +22,10 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
-nnoremap <Leader>f :Lex!<CR><C-w>-<C-w>-<C-w>h
-"nnoremap <Leader>f :Lex!<CR>:vertical resize 40<CR><C-w>h
+nnoremap <Leader>f :Lex!<CR>:vertical resize 25<CR><C-w>h
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
+nnoremap <Leader>t :newtab<CR>
+
 
 colorscheme ron
 
