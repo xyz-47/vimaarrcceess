@@ -33,7 +33,7 @@ nnoremap <Leader>w :tabc<CR>
 nnoremap <Leader><tab> gt "next tab
 nnoremap <Leader><S-tab> gT "prev tab
 
-colorscheme ron
+colorscheme wildcharm
 syntax on
 
 " if backup files are created after :w
