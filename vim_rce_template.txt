@@ -1,13 +1,12 @@
 " :echo $MYVIMRC will tell you the location of the vimrc being used, but it you don't have one it'll be blank
 " :version tells you were vim will look for a vimrc.
 " :help key-notation
-" :Hex :Sex :Lex
 " <C-P> <C-N> <C-X> <C-L> code completion
-" <Ctrl-W>+v       # Opens a new vertical split
-" <Ctrl-W>+s       # Opens a new horizontal split
-" <Ctrl-W>+c       # Closes a window
-" <Ctrl-W>+o       # Makes current window the only one on screen and closes other windows
-" <Ctrl-W>+h/j/k/l # Moves the cursor to left
+" <C-w>..
+" ..+v  # Opens a new vertical split
+" ..+s  # Opens a new horizontal split
+" ..+c  # Closes a window
+" ..+o  # Makes current window the only one on screen and closes other windows
 
 let mapleader=" "
 
@@ -22,29 +21,36 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
-nnoremap <Leader>f :Lex!<CR>:vertical resize 25<CR><C-w>h
-nnoremap <Leader>b :buffers<CR>:buffer<Space>
-nnoremap <Leader>t :newtab<CR>
+
+nnoremap <Leader>p "+p "paste from OS clipboard
+nnoremap <Leader>y "+y "yank to OS clipboard
+
+nnoremap <Leader>f :Lex!<CR>  "open file explorer | :Hex :Sex :Lex
+nnoremap <Leader>sb :buffers<CR>:buffer<Space> "list buffer and select buffer
+nnoremap <Leader>ls :tabs<CR>:buffers<CR> "list buffer and tabs
+nnoremap <Leader>t :tabnew<CR>
+nnoremap <Leader>w :tabc<CR>
+nnoremap <Leader><tab> gt "next tab
+nnoremap <Leader><S-tab> gT "prev tab
 
 
 colorscheme ron
 
 " if backup files are created after :w
-" set nobackup
-" set noundofile
-" set nowritebackup
-" set noswapfile
+"set nobackup
+"set noundofile
+"set nowritebackup
+"set noswapfile
 
-set guicursor =""
+set guicursor=""
 
 set rnu
 set nu
 
-
 set expandtab
-set tabstop = 4
-set softtabstop = 4
-set shiftwidth = 4
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 set smartindent
 
@@ -53,6 +59,6 @@ set nowrap
 set hlsearch
 set incsearch
 
-set scrolloff = 8
+set scrolloff=8
 
-let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+let g:netrw_bufsettings='noma nomod nu nobl nowrap ro'
