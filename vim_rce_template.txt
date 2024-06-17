@@ -24,14 +24,17 @@ nnoremap N Nzzzv
 
 nnoremap <Leader>p "+p "paste from OS clipboard
 nnoremap <Leader>y "+y "yank to OS clipboard
+nnoremap <Leader>d "_d "delete to void
+vnoremap <Leader>d "_d
 
-nnoremap <Leader>f :Lex!<CR>  "open file explorer | :Hex :Sex :Lex
-nnoremap <Leader>sb :buffers<CR>:buffer<Space> "list buffer and select buffer
-nnoremap <Leader>ls :tabs<CR>:buffers<CR> "list buffer and tabs
-nnoremap <Leader>t :tabnew<CR>
-nnoremap <Leader>w :tabc<CR>
-nnoremap <Leader><tab> gt "next tab
-nnoremap <Leader><S-tab> gT "prev tab
+nnoremap <Leader>q :Lex!<CR> "open file explorer | :Hex :Sex :Lex
+nnoremap <Leader>b :buffers<CR>:buffer<Space> "list buffer and select buffer
+nnoremap <Leader>l :bn<CR>
+nnoremap <Leader>h :bp<CR>
+nnoremap <Leader><tab> :b#<CR> " prev open buffer
+nnoremap <Leader>e :e<Space> "open file in dir 
+nnoremap <Leader>f :find<Space> "search recursivly
+nnoremap <Leader>x :terminal<CR>
 
 colorscheme wildcharm
 syntax on
@@ -57,7 +60,7 @@ set hlsearch
 set incsearch
 set scrolloff=8
 
-set path+=**
+set path+=** "for :find
 set wildmenu
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
