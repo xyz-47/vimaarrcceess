@@ -8,6 +8,8 @@
 " ..+c  # Closes a window
 " ..+o  # Makes current window the only one on screen and closes other windows
 
+" https://github.com/neoclide/coc.nvim
+
 let mapleader=" "
 
 " Without this option, whenever a changed buffer goes to "hidden", Vim will prompt you to save the file
