@@ -24,21 +24,28 @@ nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-nnoremap <Leader>p "+p "paste from OS clipboard
-nnoremap <Leader>y "+y "yank to OS clipboard
-nnoremap <Leader>d "_d "delete to void
+"paste from OS clipboard
+nnoremap <Leader>p "+p 
+"yank to OS clipboard
+nnoremap <Leader>y "+y 
+"delete to void
+nnoremap <Leader>d "_d 
 vnoremap <Leader>d "_d
 
-nnoremap <Leader>q :Lex!<CR> "open file explorer | :Hex :Sex :Lex
-nnoremap <Leader>b :buffers<CR>:buffer<Space> "list buffer and select buffer
+"open file explorer | :Hex :Sex :Lex
+nnoremap <Leader>q :Lex!<CR> 
+"list buffer and select buffer
+nnoremap <Leader>b :buffers<CR>:buffer<Space> 
 nnoremap <Leader>l :bn<CR>
 nnoremap <Leader>h :bp<CR>
-nnoremap <Leader><tab> :b#<CR> " prev open buffer
-nnoremap <Leader>e :e<Space> "open file in dir 
-nnoremap <Leader>f :find<Space> "search recursivly
+" prev open buffer
+nnoremap <Leader><tab> :b#<CR> 
+"open file in dir 
+nnoremap <Leader>e :e<Space> 
+"search recursivly
+nnoremap <Leader>f :find<Space> 
 nnoremap <Leader>x :terminal<CR>
 
-colorscheme wildcharm
 syntax on
 
 " if backup files are created after :w
@@ -62,7 +69,8 @@ set hlsearch
 set incsearch
 set scrolloff=8
 
-set path+=** "for :find
+"for :find
+set path+=** 
 set wildmenu
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
